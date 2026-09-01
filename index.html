@@ -138,18 +138,7 @@
 
     /* Hero */
     .hero {
-      display: flex;
-      gap: 32px;
-      align-items: center;
-    }
-
-    .hero img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--border);
-      flex-shrink: 0;
+      display: block;
     }
 
     .btn-row {
@@ -249,14 +238,8 @@
         font-size: 1.9rem;
       }
 
-      .hero {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-      }
-
       .btn-row {
-        justify-content: center;
+        flex-wrap: wrap;
       }
 
       .nav ul {
@@ -286,13 +269,13 @@
   <main>
     <section id="about">
       <div class="wrap hero">
-        <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" alt="Adolfo Zapata" />
         <div>
           <h1>Hi, I'm Adolfo.</h1>
           <p class="lead">
-            One or two sentences about who you are and what you do. Replace this
-            with a short introduction &mdash; your role, your focus, and what you
-            care about building.
+            I'm a student at Berea College majoring in Computer Science. I like
+            building things &mdash; security tools, small apps, and automation
+            &mdash; and I spend most of my free time hanging out with friends and
+            family.
           </p>
           <div class="btn-row">
             <a class="btn primary" href="#contact">Get in touch</a>
@@ -307,29 +290,51 @@
         <h2>Projects</h2>
 
         <div class="item">
-          <h3><a href="#">Project One</a></h3>
-          <p class="meta">2025 &middot; Personal project</p>
+          <h3><a href="https://github.com/zapataa0">BYOB C2 Web GUI</a></h3>
+          <p class="meta">April 2026 &ndash; Present &middot; Personal project</p>
           <p>
-            A short description of the project: the problem it solves, your role,
-            and the outcome. Keep it to two or three sentences.
+            Deployed and debugged a command-and-control web application, resolving
+            outdated Flask/Werkzeug dependency conflicts to restore full
+            functionality. Configured cross-VM networking with VirtualBox port
+            forwarding to establish a reverse TCP shell between a Windows target and
+            an Ubuntu C2 server, then generated a custom Python payload to enable
+            bot registration and session tracking through the web dashboard.
           </p>
           <div class="tags">
             <span class="tag">Python</span>
-            <span class="tag">FastAPI</span>
-            <span class="tag">PostgreSQL</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Docker</span>
+            <span class="tag">VirtualBox</span>
           </div>
         </div>
 
         <div class="item">
-          <h3><a href="#">Project Two</a></h3>
-          <p class="meta">2024 &middot; Open source</p>
+          <h3><a href="https://github.com/zapataa0/Betting-Props-Bot">Sports Betting Analytics Platform</a></h3>
+          <p class="meta">April 2026 &ndash; Present &middot; Personal project &middot; <a href="https://betting-props-bot.onrender.com">live demo</a></p>
           <p>
-            Another project summary. Link the title to the live site or the
-            repository so people can see the work.
+            A multi-sport analytics platform (MLB, WNBA, and soccer) that ingests
+            player game logs and live sportsbook odds, models per-player outcome
+            probabilities, and publishes a daily ranked board of value bets. Built
+            as an end-to-end pipeline &mdash; ingest, feature engineering, model,
+            publish, grade &mdash; served by a FastAPI web app integrating four
+            external sports-data and odds APIs.
+          </p>
+          <p style="margin-top: 12px;">
+            The probability estimator shrinks per-player historical rates toward
+            de-vigged market prices, and a calibration layer uses Wilson score
+            confidence intervals to bar markets whose realized accuracy falls below
+            a statistical floor. Every slate is graded against an immutable ledger
+            written at publish time to prevent hindsight bias, and walk-forward,
+            out-of-sample backtesting is a shipping gate. Current track record:
+            192&ndash;47 (80.3%) across 20 published slates.
           </p>
           <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">pandas</span>
             <span class="tag">JavaScript</span>
-            <span class="tag">React</span>
+            <span class="tag">Render</span>
           </div>
         </div>
       </div>
@@ -340,21 +345,20 @@
         <h2>Experience</h2>
 
         <div class="item">
-          <h3>Job Title &mdash; Company</h3>
-          <p class="meta">Jan 2024 &ndash; Present</p>
+          <h3>Information Technology Support Specialist &mdash; Berea College</h3>
+          <p class="meta">Aug 2024 &ndash; Present &middot; Berea, KY</p>
           <p>
-            One or two lines on your responsibilities and a concrete
-            accomplishment with a measurable result where possible.
+            Provide technical support by diagnosing and resolving hardware,
+            software, and network issues, reducing system downtime. Assist with
+            installing, configuring, and maintaining operating systems, network
+            components, and software applications, and collaborate with
+            cross-functional IT teams to troubleshoot complex technical challenges.
           </p>
         </div>
 
-        <div class="item">
-          <h3>Previous Title &mdash; Company</h3>
-          <p class="meta">2022 &ndash; 2024</p>
-          <p>
-            Another role summary. Focus on impact rather than a list of duties.
-          </p>
-        </div>
+        <p class="lead">
+          Full details are in my <a href="/resume.pdf">resume</a>.
+        </p>
       </div>
     </section>
 
@@ -366,9 +370,9 @@
           conversations and opportunities.
         </p>
         <div class="btn-row">
-          <a class="btn primary" href="mailto:you@example.com">you@example.com</a>
+          <a class="btn primary" href="mailto:azapata0765@gmail.com">azapata0765@gmail.com</a>
           <a class="btn" href="https://github.com/zapataa0">GitHub</a>
-          <a class="btn" href="https://linkedin.com/in/your-handle">LinkedIn</a>
+          <a class="btn" href="https://linkedin.com/in/adolfo-zapata">LinkedIn</a>
         </div>
       </div>
     </section>
