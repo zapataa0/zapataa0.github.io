@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog &mdash; Adolfo Zapata</title>
+  <meta name="description" content="Writing by Adolfo Zapata." />
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="wrap nav">
+      <a class="name" href="../index.html">Adolfo Zapata</a>
+      <ul>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="./">Blog</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <h1>Blogs</h1>
+
+        <ul class="post-list">
+          <li class="post-link">
+            <a href="first-post.html"><h3>Blog 1</h3></a>
+            <p class="meta">October 22, 2026</p>
+            <p>Open Source Reflection - Blog 1</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; <span id="year">2026</span> Adolfo Zapata. This site was built with the help of Claude.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
